@@ -1,0 +1,19 @@
+<Frame>
+  <Page>
+    <ActionBar title="Title">
+      <ActionItem ios.position="right" text="Done" (tap)="onDoneBtnTap()"></ActionItem>
+    </ActionBar>
+    <StackLayout padding="10" background="pink">
+      <Button text="Toggle TextField" (tap)="onToggleBtnTap()"></Button>
+      <Label class="h2" text="label 1"></Label>
+      <Label class="h2" text="label 2"></Label>
+      <Label class="h2" text="label 3"></Label>
+      <TextView
+        *ngIf="textFiledVisibility"
+        class="h3"
+        #textField
+        background="yellow"
+        [text]="veryLongText"></TextView>
+    </StackLayout>
+  </Page>
+</Frame>
